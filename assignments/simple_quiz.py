@@ -19,3 +19,4 @@ def tally_score():
     x = str(x)
     print (x + "/5")
 tally_score()
+print("goodbye")
