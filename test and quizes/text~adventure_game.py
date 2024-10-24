@@ -73,7 +73,7 @@ def heir_time_skip():                                                           
         print("I Am The King! ending")
         restart()
     elif your_town == "2" or "military":
-        print("Your ability to make this a military town foce is invane because of the famined people and lack of buget but you still persist with an inflated ego.")
+        print("Your ability to make this a military town is invane because of the famined people and lack of buget but you still persist with an inflated ego.")
         military()
     elif your_town == "3" or "economically":
         print("Thats all well and good but what is gonna be your method of doing that.")
@@ -99,4 +99,8 @@ def mom_timeskip():                                                             
     else:
         print("invalid response, try again ")
         mom_timeskip()
-healers_guild  = input("You know this is a problem. would you like to deal with it by either running them out of buisnes or have your father mandate a new law capping prices on clinics")
+# use for guildhealers_guild  = input("You know this is a problem. would you like to deal with it by either running them out of buisnes or have your father mandate a new law capping prices on clinics")
+def military(): #section 4 path 2
+    treason_war = input("Filled with greed and ego you know you must do something big to spread your name across Maregorum. Will you 1.go to war with neighboring nations or 2. throw over you father.")
+    if treason_war == "1":
+        print("you and your smalled army try to take over the crown from your father however it was far from sufficent ")
