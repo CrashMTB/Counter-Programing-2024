@@ -47,7 +47,7 @@ def you_do():                                                                   
         you_do()
 def sooth():                                        #3rd section path 1
     print("As you are soothed you feel much better")
-    to_mother = input("you feel a lot better so will you 1. stop crying, 2, say thankyou, or 3.continue to cry")
+    to_mother = input("you feel a lot better so will you 1. stop crying, 2, say thank you, or 3.continue to cry")
     if to_mother == "1":
         print("Thats it dear. ive got you its ok")
         mom_timeskip()
@@ -99,8 +99,40 @@ def mom_timeskip():                                                             
     else:
         print("invalid response, try again ")
         mom_timeskip()
-# use for guildhealers_guild  = input("You know this is a problem. would you like to deal with it by either running them out of buisnes or have your father mandate a new law capping prices on clinics")
 def military(): #section 4 path 2
     treason_war = input("Filled with greed and ego you know you must do something big to spread your name across Maregorum. Will you 1.go to war with neighboring nations or 2. throw over you father.")
-    if treason_war == "1":
-        print("you and your smalled army try to take over the crown from your father however it was far from sufficent ")
+    if treason_war == "2":
+        print("you and your smalled army try to take over the crown from your father however it was far from sufficent. Your army got wiped out and your father threw you in a dungeon.")
+        dungeon()
+    elif treason_war == "1":
+        print("you atempt a raid on the strongest kingdom, how ever your soldiers are famined and your training was sparce and inneficient leading to the defeat of your soldiers")
+        print("Death of a Tyrant. ending")               #ending 5
+        restart()
+    else:
+        print("invalid response, try again ")
+        military()
+def econ():                     #section 4 path 3
+    econ = input("you have a few options would you like to go for\n1. the arts\n2. mining")
+    if econ == "1":                                                 #ending  6
+        print("it took a while but the arts are now booming your known as the town of fredom and expresion the oposite of your opressive neighbors and man people across Maregorum are coming to live in your town")
+        print("The town of Freedom. ending")
+        restart()
+    elif econ == "2":
+        mine()
+    else:
+        print("invalid response, try again ")
+        econ()
+def mine():                      #section 5 path 1
+        mine = input("you notice there are caverns and ravine which would you like to focus your mining in").lower
+        if mine == "cavern" or "caverns":
+            cave()
+        elif mine == "ravine":
+            ravine()
+        else: print("invalid response, try again ")
+def guild():                     #section 5 path 2
+    healers_guild  = input("You know this is a problem. would you like to deal with it by \nA. Either running them out of buisnes.  \nB. Have your father mandate a new law capping prices on clinics.").lower
+    if healers_guild == "a":
+        print("Try as you might your a small clinic with not much creditability in the public view, you seem to be un able to do anything to these unhanded buisnesses. ")
+        print("Useless. ending")
+    elif healers_guild == "b":
+        print("your father agreed. after that the prcies dropped and people debts and sentences to servantude  were gretly diminished ")s
