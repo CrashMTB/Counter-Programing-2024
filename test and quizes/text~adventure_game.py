@@ -9,7 +9,7 @@ def restart():                         # use this function at the end of a path 
     else:
         print("Not valid")
         restart()
-def second_chance():             #first section
+def second_chance():             #section 1
     do_you_live = input("Hello there child. You can have a second chance at life. Will you take your second chance? (yes/no) \n> ").lower
     if do_you_live == "yes":
         print("Good i will give you a second chance")
@@ -19,7 +19,7 @@ def second_chance():             #first section
     else:
         print("That isnt valid, try again")
         second_chance()
-def you_dont():                  # 2nd section path 1
+def you_dont():                  #section 1 path 1           ending 1
     life_death = input("you dont?! why not like are you sure?\n> ").lower
     if life_death == "yes":                        #first ending 
         print("i will not force you to do this but it is a shame")
@@ -32,7 +32,7 @@ def you_dont():                  # 2nd section path 1
     else:
         print("Invalid try again")
         you_dont()
-def you_do():                    # 2nd section path 2 
+def you_do():                    #section 2 path 2 
     print("Suddenly as your senses come back you start to feel something around you like your rapped in something, you open your eyes to realize your in the arms of a young woman whos looking down at you.")
     print("A man enters a room and says, so thats our baby son. In a moment of relization you dont know what to do")
     baby = input("You are shocked and cant think of what to do so do you 1. do nothing, or 2. cry?\n> ")
@@ -45,7 +45,7 @@ def you_do():                    # 2nd section path 2
     else:
         print("Invalid, try again")
         you_do()
-def sooth():                     #3rd section path 1
+def sooth():                     #section 3 path 1           ending 2
     print("As you are soothed you feel much better")
     to_mother = input("you feel a lot better so will you 1. stop crying, 2, say thank you, or 3.continue to cry")
     if to_mother == "1":
@@ -62,7 +62,7 @@ def sooth():                     #3rd section path 1
     else:
         print("invalid please try again")
         sooth()
-def heir_time_skip():            #3rd section path 2
+def heir_time_skip():            #section 3 path 2           ending 3
     print("16 years has passed yove learned some things about this new world you live in, the important stuff being the world you are in is called Maregorum.")
     print("The second thing thats important to know is that you are the son to the king of the kingdom of rampart.")
     print("Your father has been preparing you to eventually take over his crown so hes putting you in charge of a small poor region of the land to prepare.")
@@ -81,7 +81,7 @@ def heir_time_skip():            #3rd section path 2
     else:
         print("invalid please try again")
         heir_time_skip()
-def mom_timeskip():              #section 4 path 1
+def mom_timeskip():              #section 4 path 1             ending 4
     print("16 years has passed yove learned some things about this new world you live in, the important stuff being the world you are in is called Maregorum.")
     print("The second thing thats important to know is that you are the son to the king of the kingdom of rampart.")
     print("Your father has been preparing you to eventually take over his crown so hes putting you in charge of a small poor region of the land to prepare.")
@@ -99,22 +99,22 @@ def mom_timeskip():              #section 4 path 1
     else:
         print("invalid response, try again ")
         mom_timeskip()
-def military():                  #section 4 path 2
-    treason_war = input("Filled with greed and ego you know you must do something big to spread your name across Maregorum. Will you 1.go to war with neighboring nations or 2. throw over you father.")
+def military():                  #section 4 path 2             ending 5
+    treason_war = input("Filled with greed and ego you know you must do something big to spread your name across Maregorum. Will you 1.Go to war with neighboring nations or 2. Throw over you father.\n>")
     if treason_war == "2":
-        print("you and your smalled army try to take over the crown from your father however it was far from sufficent. Your army got wiped out and your father threw you in a dungeon.")
+        print("You and your smalled army try to take over the crown from your father however it was far from sufficent. Your army got wiped out and your father threw you in a dungeon.")
         dungeon()
     elif treason_war == "1":
-        print("you atempt a raid on the strongest kingdom, how ever your soldiers are famined and your training was sparce and inneficient leading to the defeat of your soldiers")
+        print("You atempt a raid on the strongest kingdom, how ever your soldiers are famined and your training was sparce and inneficient leading to the defeat of your soldiers")
         print("Death of a Tyrant. ending")               #ending 5
         restart()
     else:
         print("invalid response, try again ")
         military()
-def econ():                      #section 4 path 3
-    econ = input("you have a few options would you like to go for\n1. the arts\n2. mining")
+def econ():                      #section 4 path 3             ending 6
+    econ = input("You have a few options would you like to go for\n1. The arts\n2. Mining\n> ")
     if econ == "1":                                                 #ending  6
-        print("it took a while but the arts are now booming your known as the town of fredom and expresion the oposite of your opressive neighbors and man people across Maregorum are coming to live in your town")
+        print("It took a while but the arts are now booming your known as the town of fredom and expresion the oposite of your opressive neighbors and man people across Maregorum are coming to live in your town.")
         print("The town of Freedom. ending")
         restart()
     elif econ == "2":
@@ -123,26 +123,28 @@ def econ():                      #section 4 path 3
         print("invalid response, try again ")
         econ()
 def mine():                      #section 5 path 1
-        mine = input("you notice there are caverns and ravine which would you like to focus your mining in").lower
+        mine = input("You notice there are caverns and ravine which would you like to focus your mining in.\n> ").lower
         if mine == "cavern" or "caverns":
             cave()
         elif mine == "ravine":
             ravine()
-        else: print("invalid response, try again ")
-def guild():                     #section 5 path 2
-    healers_guild  = input("You know this is a problem. would you like to deal with it by \nA. Either running them out of buisnes.  \nB. Have your father mandate a new law capping prices on clinics.").lower
+        else:
+            print("invalid response, try again ")
+            mine()
+def guild():                     #section 5 path 2             ending 7
+    healers_guild  = input("You know this is a problem. would you like to deal with it by \nA. Either running them out of buisnes.  \nB. Have your father mandate a new law capping prices on clinics.\n> ").lower
     if healers_guild == "a":
         print("Try as you might your a small clinic with not much creditability in the public view, you seem to be un able to do anything to these unhanded buisnesses. ")
         print("Useless. ending")                             #ending 7
     elif healers_guild == "b":
-        print("your father agreed. after that the prcies dropped and people debts and sentences to servantude  were gretly diminished.")
+        print("Your father agreed. after that the prcies dropped and people debts and sentences to servantude  were gretly diminished.")
         print("The people hailed you as a hero, now that youve accomplished that the members of the healers guild has it out for you.")
         revenge()
     else:
         print("invalid response, try again ")
         guild()
 def dungeon():                   #section 5 path 3
-    trapped = input("now that your in the dungeon you have 3 options\n1. Give up, and accept your fate\n2. plead with your father to let you go\n3. break out ")
+    trapped = input("Now that your in the dungeon you have 3 options\n1. Give up, and accept your fate\n2. Plead with your father to let you go\n3. Break out \n> ")
     if trapped == "1":
         accept()
     elif trapped == "2":
@@ -152,5 +154,47 @@ def dungeon():                   #section 5 path 3
     else:
         print("invalid response, try again ")
         guild()
-def cave():
-    print("you send the people of your town")
+def cave():                      #section 6 path 1
+    print("You send the people of your town into the caves much to your delight its rich in adamantite, and mythril wich is actualy quite easy to get.")
+    print("Because of the rarity of this metal you can sell it for a lot whith the economical boom this created you can now choose to paths.")
+    selling = input ("Would you like to\n1. Sell to the kingdom of Rampart only\n2. Sell to the whole of Maregorum\n> ")
+    if selling== "1":
+        kingdom_expansion()
+    elif selling== "2":
+        buisness_man()
+    else:
+        print("invalid response, try again ")
+        cave()
+def ravine():                    #section 6 path 2
+    print("You send people to the ravine its very dangerous there many people died just exploring it but there was a silver lining, unobtainium, and mana cyrstals.")
+    print("Unobtainium is the most valuable resource in Maregorum. It can be used in magic riturals of the highest degree and outputs the purest form of mana known as either.")
+    print("Mana crystals are used in everything from wizard wands to lights.")
+    mage = input("your left with an important choice either to A. switch your towns focus to mage training, or B. to sell the mined ore.\n> ").lower
+    if mage == "a":
+        magic()
+    elif mage == "b":
+        riches()
+    else:
+        print("invalid response, try again ")
+        mine()
+def revenge():                   #section 6 path 3             ending 8 & 9
+    print("With the healers guild now after you you have three choise.")
+    print("1. Fightback\n2. Run and hide\n3. ignore")
+    guild_preasure = input("> ")
+    if guild_preasure == "1":
+        print("They send assasins after you and sadly you parished do to a knife to your throat.")
+        print("Assasinated! ending")         #ending 8
+        restart()
+    elif guild_preasure == "2":
+        print("After running and hiding for days strait but you know you may never return.")
+        print("The Lost Traveler. ending")  #ending 9
+    elif guild_preasure == "3":
+        print("Ignoring there threats only makes them angier so you decide to shut them up once and for all.")
+        guild_destruction()
+    else:
+        print("invalid response, try again ")
+        revenge()
+def accept():                    #section 6 path 4             ending 10
+    print("You decided that it wasnt worth the fight to get out and you never did get out you ended up dying of old age in there.")
+    print("Dungeon. ending")      #ending 10
+    restart()
