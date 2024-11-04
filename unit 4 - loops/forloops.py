@@ -18,7 +18,7 @@ for i in range(0,10):
     
 # i is the index it will start at 0 and will stop when hits 10
     
-#similar to a if else statment
+#similar to a if  c else statment
     
 #i is a temperary varible
     
