@@ -18,4 +18,4 @@ while guess != str(x):
         print ("Too high guess again.")
     else:
         print("invalid try again")
-print ("You got it in " = str(y) + " Attempts")
+print ("You got it in " + str(y) + " Attempts")
