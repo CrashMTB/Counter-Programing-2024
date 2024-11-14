@@ -16,7 +16,7 @@ while True:      #everything goes in here
     cp.pixels[8] = (100,0,0)
     cp.pixels[9] = (100,0,0)
     cp.play_tone(500, 0.75)  # Plays a 440 Hz tone (A4) for 1 second
-ads
+
     time.sleep(0.5)
     cp.pixels[0] = (0,0,100) 
     cp.pixels[1] = (0,0,100)
