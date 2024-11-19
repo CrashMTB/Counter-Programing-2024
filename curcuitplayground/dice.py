@@ -16,6 +16,7 @@ def light_random_pixel():
 # Run the function to light a random pixel
 while True:
     if cp.button_a:
+        cp.pixels.fill(0,0,0)
         light_random_pixel()
         while cp.button_a:  # Wait until button is released
             pass
