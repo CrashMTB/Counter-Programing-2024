@@ -2,35 +2,25 @@ import time
 import random
 from adafruit_circuitplayground import cp
 
-# Set the number of pixels on the Circuit Playground (10 pixels)
-num_pixels = 10
 
-# Define a function to select a random pixel
-def light_random_pixel():
-    # Select a random pixel index (from 0 to 9)
-    pixel_index = random.randint(0, num_pixels - 1)
-    
-    # Set the random pixel to a random color (Red, Green, Blue)
-    cp.pixels[pixel_index] = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
+# Function to turn off all pixels
+def turn_off_pixels():
+    cp.pixels.fill((0, 0, 0))  # Set all pixels to black (off)
 
-# Run the function to light a random pixel
+# Function to light up a certain number of pixels
+def light_up_pixels(num_pixels):
+    # Ensure we don't try to light up more than the available pixels
+    num_pixels = min(num_pixels, len(cp.pixels))
+    for i in range(num_pixels):
+        cp.pixels[i] = (0, 255, 0)
+
 while True:
+   
     if cp.button_a:
-        cp.pixels.fill(0,0,0)
-        light_random_pixel()
-        while cp.button_a:  # Wait until button is released
-            pass
-    
-
-
+     
+        num = random.randint(1, 10)
+        light_up_pixels(num)
+        time.sleep(0.5)  
     if cp.button_b:
-        cp.pixels[0] = (0,0,0) 
-        cp.pixels[1] = (0,0,0)
-        cp.pixels[2] = (0,0,0)
-        cp.pixels[3] = (0,0,0)
-        cp.pixels[4] = (0,0,0)
-        cp.pixels[5] = (0,0,0)
-        cp.pixels[6] = (0,0,0)
-        cp.pixels[7] = (0,0,0)
-        cp.pixels[8] = (0,0,0)
-        cp.pixels[9] = (0,0,0)
+        turn_off_pixels() 
+        time.sleep(0.5) 
