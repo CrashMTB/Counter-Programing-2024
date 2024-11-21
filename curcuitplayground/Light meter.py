@@ -76,5 +76,5 @@
             cp.pixels[7] = (0,255,0)
             cp.pixels[8] = (0,255,0)
             cp.pixels[9] = (0,255,0)
-        if cp.light > 30:  # Adjust threshold for sensitivity to darkness
+        if cp.light > 10:  # Adjust threshold for sensitivity to darkness
             cp.pixels.fill((0,0,0))
